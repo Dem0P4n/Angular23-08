@@ -1,0 +1,38 @@
+<h1>String interpolation</h1>
+<p>Llamando el atributo nombre desde nuestro ts</p>
+<p>Mi nombre es {{ nombre }}</p>
+<p>El resultado de la suma 80 + 30 {{ 80 + 30}}</p>
+<p>El resultado de la resta 80 - 20 {{ 80 - 20 }}</p>
+<h2>Uso de Pipe</h2>
+<p>Los pipes son funciones que se ejecutan bajo la técnica Memoized </p>
+<p>mi nombre en mayúsculas {{ nombre | uppercase }} </p>
+<p>mi nombre en minúscula {{ nombre | lowercase }} </p>
+<h2>Uso de Funciones</h2>
+<p>La suma de 40 + 50 es {{ sumar(40,50) }}</p>
+<h1>Event Binding</h1>
+<button (click)="eventoBoton($event)">Apretame</button>
+<h1>Usando String interpolation y Event Binding</h1>
+<button (click)="aumentarContador()">Aumentar contador</button>
+<p>{{ contador }}</p>
+<p>El scroll está en {{scroll}}</p>
+<section
+  class="section"
+  (scroll)="scrollEn($event)">
+</section>
+
+
+<h1>Property Binding</h1>
+<progress [max]=" 100 " [value]="contador"></progress>
+<hr>
+<input type="number" [value]="alto" (input)="capturarAlto($event)">
+<input type="number" [value]="ancho"  (input)="capturarAncho($event)"><br>
+<img [src]=" imagen " [height]="alto" [width]="ancho">
+<hr>
+<h1>NgClass y NgStyle</h1>
+<p>Boton para cambiar clase</p>
+<button (click)="mostrar = !mostrar" [ngClass]="{rojo:mostrar,grande:mostrar}">Cambiar clase</button>
+{{ mostrar }}
+<h1 [ngClass]="{esconder:mostrar}">Mensaje Secreto</h1>
+<h2 [ngStyle]="{'color': color, 'font-size.px': ancho}">Hola soy un h2 con estilos</h2>
+<input type="color" [value]="color" (change)="capturarColor($event)">
+

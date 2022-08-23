@@ -1,0 +1,24 @@
+.section {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 300px;
+  overflow: scroll;
+}
+
+.rojo{
+  color: red;
+  background-color: black;
+  border: 5px solid wheat;
+}
+
+.grande{
+  display: block;
+  height: 150px;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.esconder{
+  opacity: 0;
+}
